@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Management</title>
+    <link rel="stylesheet" href="total.css">
+    <script src="farms.js" defer></script>
+    <script src="data_share.js" defer></script>
+</head>
+<body>
+   
+    <header>
+        <div class="container">
+            <h1>Supplier Management</h1>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+
+        <!-- Farmers' information section -->
+        <section class="center-content">
+            <h2>Farmers' Information</h2>
+
+            <!-- Form to input farmer details -->
+            <div class="form-section">
+                <form id="farmer-form">
+                    <label for="farmer-id">Farmer ID:</label>
+                    <input type="text" id="farmer-id" placeholder="Unique Identifier">
+
+                    <label for="farmer-name">Name:</label>
+                    <input type="text" id="farmer-name" placeholder="Farmer Name">
+
+                    <label for="contact-details">Contact Details:</label>
+                    <input type="text" id="contact-details" placeholder="Phone or Email">
+
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" placeholder="Address or GPS Coordinates">
+
+                    <button type="submit">Save Farmer</button>
+                </form>
+            </div>
+
+            <!-- Search and export options -->
+            <div class="search-section">
+                <input type="text" id="search-field" placeholder="Search by Name or Location">
+                <button id="search-farmers">Search</button>
+                <button id="export-farmers">Export Farmers</button>
+            </div>
+
+            <!-- Container to display list of farmers -->
+            <div id="farmer-container"></div>
+        </section>
+
+        <!-- Purchase records section -->
+        <section class="center-content">
+            <h2>Purchase Records</h2>
+
+            <!-- Form to log purchase details -->
+            <div class="form-section">
+                <form id="purchase-form">
+                    <label for="purchase-id">Purchase ID:</label>
+                    <input type="text" id="purchase-id" placeholder="Unique Identifier">
+
+                    <label for="farmer-id-purchase">Farmer ID:</label>
+                    <input type="text" id="farmer-id-purchase" placeholder="Linked Farmer ID">
+
+                    <label for="purchase-date">Date:</label>
+                    <input type="date" id="purchase-date">
+
+                    <label for="quantity">Quantity (kg):</label>
+                    <input type="number" id="quantity" placeholder="Enter Quantity">
+
+                    <label for="price">Price per kg:</label>
+                    <input type="number" id="price" placeholder="Enter Price">
+
+                    <button type="submit">Log Purchase</button>
+                </form>
+            </div>
+
+            <!-- Sorting options for purchase records -->
+            <div class="sort-section">
+                <button id="sort-date">Sort by Date</button>
+                <button id="sort-farmer">Sort by Farmer</button>
+                <button id="sort-amount">Sort by Amount</button>
+            </div>
+
+            <!-- Summary generation options -->
+            <div class="summary-section">
+                <button id="summary-farmer">Generate Summary by Farmer</button>
+                <button id="summary-time-period">Generate Summary by Time Period</button>
+            </div>
+
+            <!-- Container to display purchase records -->
+            <div id="purchase-container"></div>
+        </section>
+
+        <!-- Expense calculation section -->
+        <section class="center-content">
+            <h2>Expense Calculation</h2>
+
+            <!-- Form to select time period for expense calculation -->
+            <div class="form-section">
+                <form id="expense-form">
+                    <label for="time-period">Select Time Period:</label>
+                    <select id="time-period">
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
+                    <button type="submit">Calculate Expenses</button>
+                </form>
+            </div>
+
+            <!-- Button to generate raw material report -->
+            <div class="generate-report-section">
+                <button id="generate-report">Generate Raw Material Report</button>
+            </div>
+        </section>
+
+        <!-- Button to navigate back to the home page -->
+        <div class="home-section">
+            <button onclick="window.location.href='index.html';">Home</button>
+        </div>
+    </main>
+</body>
+</html>

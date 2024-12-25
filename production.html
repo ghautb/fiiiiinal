@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Management</title>
+    <link rel="stylesheet" href="total.css">
+    <script src="production1.js" defer></script>
+    <script src="data_share.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Production Management</h1>
+    </header>
+    <main>
+        <!-- Product Categorization Section -->
+        <section id="categorization">
+            <h2>Product Categorization</h2>
+            <form id="categorization-form">
+                <label for="product-weight">Product Weight (g):</label>
+                <input type="number" id="product-weight" placeholder="Enter weight in grams" required>
+                <button type="button" id="assign-category">Assign Category</button>
+            </form>
+            <p>Assigned Category: <span id="category-output">N/A</span></p>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing">
+            <h2>Set and Update Prices</h2>
+            <form id="pricing-form">
+                <label for="category-select">Select Category:</label>
+                <select id="category-select">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra-large">Extra Large</option>
+                    <option value="family-pack">Family Pack</option>
+                    <option value="bulk-pack">Bulk Pack</option>
+                    <option value="premium">Premium</option>
+                </select>
+                <label for="price-input">Price per Unit (kg):</label>
+                <input type="number" id="price-input" placeholder="Enter price in USD" required>
+                <button type="button" id="update-price">Update Price</button>
+            </form>
+            <h3>Pricing Structure</h3>
+            <ul id="pricing-list"></ul>
+        </section>
+
+        <!-- Cost Calculation Section -->
+        <section id="cost-calculation">
+            <h2>Calculate Total Cost</h2>
+            <form id="cost-form">
+                <label for="category-cost-select">Select Category:</label>
+                <select id="category-cost-select">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra-large">Extra Large</option>
+                    <option value="family-pack">Family Pack</option>
+                    <option value="bulk-pack">Bulk Pack</option>
+                    <option value="premium">Premium</option>
+                </select>
+                <label for="quantity">Enter Quantity:</label>
+                <input type="number" id="quantity" placeholder="Enter quantity" required>
+                <button type="button" id="calculate-cost">Calculate Cost</button>
+            </form>
+            <p>Total Cost: <span id="total-cost">$0.00</span></p>
+        </section>
+
+        <!-- Inventory Section -->
+        <section id="inventory">
+            <h2>Inventory Management</h2>
+            <form id="inventory-form">
+                <label for="category-inventory-select">Select Category:</label>
+                <select id="category-inventory-select">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra-large">Extra Large</option>
+                    <option value="family-pack">Family Pack</option>
+                    <option value="bulk-pack">Bulk Pack</option>
+                    <option value="premium">Premium</option>
+                </select>
+                <label for="stock-level-input">Stock Level:</label>
+                <input type="number" id="stock-level-input" placeholder="Enter stock level" required>
+                <button type="button" id="update-stock">Update Stock</button>
+            </form>
+            <h3>Current Inventory</h3>
+            <table id="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Stock Level</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--  dynamically added here -->
+                </tbody>
+            </table>
+            <!-- New Packaging Process Section -->
+            <h3>Packaging Process</h3>
+            <button type="button" id="start-packaging">Start Packaging Process</button>
+            <div id="packaging-alerts"></div>
+        </section>
+
+        <!-- Inventory Report Section -->
+        <section id="inventory-report">
+            <h2>Inventory Report</h2>
+            <button type="button" id="generate-report">Generate Report</button>
+            <div id="report-output"></div>
+        </section>
+    </main>
+    <footer>
+        <button onclick="window.location.href='index.html'">Home</button>
+    </footer>
+</body>
+</html>

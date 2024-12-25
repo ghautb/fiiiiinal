@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Analysis Module</title>
+    <link rel="stylesheet" href="total.css">
+    <script src="finan.js" defer></script>
+    <script src="data_share.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Financial Analysis Module</h1>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+
+        <!-- Income and Expense Calculation Section -->
+        <section class="center-content">
+            <h2>Income and Expense Calculation</h2>
+
+            <!-- Form to input income and expense details -->
+            <div class="form-section">
+                <form id="income-expense-form">
+                    <label for="total-income">Total Income:</label>
+                    <input type="number" id="total-income" placeholder="Enter Total Income">
+
+                    <label for="total-expenses">Total Expenses:</label>
+                    <input type="number" id="total-expenses" placeholder="Enter Total Expenses">
+
+                    <button type="submit">Calculate Net Income</button>
+                </form>
+            </div>
+
+            <!-- Output area for income and expense results -->
+            <div id="income-expense-output"></div>
+        </section>
+
+        <!-- Tax Calculation Section -->
+        <section class="center-content">
+            <h2>Tax Calculation</h2>
+
+            <!-- Form to input tax details -->
+            <div class="form-section">
+                <form id="tax-calculation-form">
+                    <label for="income-before-tax">Income Before Tax:</label>
+                    <input type="number" id="income-before-tax" placeholder="Enter Income Before Tax">
+
+                    <label for="tax-rate">Tax Rate (%):</label>
+                    <input type="number" id="tax-rate" placeholder="Enter Tax Rate">
+
+                    <button type="submit">Calculate Tax</button>
+                </form>
+            </div>
+
+            <!-- Output area for tax calculation results -->
+            <div id="tax-output"></div>
+        </section>
+
+        <!-- Net Profit Calculation Section -->
+        <section class="center-content">
+            <h2>Net Profit Calculation</h2>
+
+            <!-- Form to input net profit details -->
+            <div class="form-section">
+                <form id="net-profit-form">
+                    <label for="total-revenue">Total Revenue:</label>
+                    <input type="number" id="total-revenue" placeholder="Enter Total Revenue">
+
+                    <label for="total-expenses-net">Total Expenses:</label>
+                    <input type="number" id="total-expenses-net" placeholder="Enter Total Expenses">
+
+                    <label for="total-tax">Total Tax:</label>
+                    <input type="number" id="total-tax" placeholder="Enter Total Tax">
+
+                    <button type="submit">Calculate Net Profit</button>
+                </form>
+            </div>
+
+            <!-- Output area for net profit results -->
+            <div id="net-profit-output"></div>
+        </section>
+
+        <!-- Button to navigate back to the home page -->
+        <div class="home-section">
+            <button onclick="window.location.href='index.html';">Home</button>
+        </div>
+    </main>
+
+    
+</body>
+</html>

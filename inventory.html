@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="total.css">
+    <script src="inventory.js" defer></script>
+    <script src="data_share.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Inventory Management Module</h1>
+        </div>
+    </header>
+    <main>
+        <!-- Inventory Input Section -->
+        <section class="center-content">
+            <h2>Manage Inventory</h2>
+            <div class="form-section">
+                <form id="inventory-form">
+                    <label for="item-id">Item ID:</label>
+                    <input type="text" id="item-id" placeholder="Unique Identifier" required>
+
+                    <label for="category">Category:</label>
+                    <input type="text" id="category" placeholder="e.g., Fresh, Frozen, Organic" required>
+
+                    <label for="quantity-available">Quantity Available:</label>
+                    <input type="number" id="quantity-available" placeholder="Current Stock Level" required>
+
+                    <label for="reorder-level">Reorder Level:</label>
+                    <input type="number" id="reorder-level" placeholder="Minimum Stock Level" required>
+
+                    <label for="restock-date">Restock Date:</label>
+                    <input type="date" id="restock-date" placeholder="Scheduled Restock Date">
+
+                    <label for="storage-location">Storage Location:</label>
+                    <input type="text" id="storage-location" placeholder="Warehouse Section, Bin Number">
+
+                    <button type="submit">Add/Update Inventory</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Inventory Tracking Section -->
+        <section class="center-content">
+            <h2>Inventory Tracking</h2>
+            <div id="inventory-list">
+                <!-- Inventory items will be dynamically displayed here -->
+            </div>
+        </section>
+
+        <!-- Demand Forecasting Section -->
+        <section class="center-content">
+            <h2>Demand Forecasting</h2>
+            <div>
+                <button id="generate-forecast">Generate Forecast</button>
+                <div id="forecast-output">
+                    <!-- Forecasting results will appear here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerts and Notifications Section -->
+        <section class="center-content">
+            <h2>Alerts and Notifications</h2>
+            <div id="alerts-container">
+                <!-- Notifications and alerts will be dynamically generated here -->
+            </div>
+        </section>
+
+        <!-- Reporting Section -->
+        <section class="center-content">
+            <h2>Reporting</h2>
+            <div class="form-section">
+                <button id="generate-daily-report">Generate Daily Report</button>
+                <button id="generate-weekly-report">Generate Weekly Report</button>
+                <button id="generate-monthly-report">Generate Monthly Report</button>
+                <button id="export-inventory-report">Export Report to CSV</button>
+            </div>
+            <div id="report-output">
+                <!-- Report summaries will appear here -->
+            </div>
+        </section>
+
+        <!-- Home Button -->
+        <div class="home-section">
+            <button onclick="window.location.href='index.html';">Home</button>
+        </div>
+    </main>
+</body>
+</html>

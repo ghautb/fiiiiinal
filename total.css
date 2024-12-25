@@ -1,0 +1,213 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Main Section Styling */
+main {
+    padding: 20px;
+}
+
+.center-content {
+    margin: 30px auto;
+    max-width: 700px;
+    text-align: center;
+}
+
+.center-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.center-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Form Section */
+.form-section {
+    background-color: #111;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #555;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #222;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #333;
+}
+
+table tr:hover {
+    background-color: #444;
+}
+
+/* Alerts */
+.alert {
+    background-color: #550000;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #aa0000;
+    border-radius: 5px;
+}
+
+/* Module-Specific Styles */
+/* Farmers Module */
+#farmer-container {
+    margin: 20px 0;
+}
+
+/* Financial Module */
+#income-expense-output, #tax-output, #net-profit-output {
+    margin-top: 20px;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+/* Inventory Module */
+.inventory-item {
+    text-align: left;
+    background-color: #111;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+/* Production Module */
+#category-output {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Report Generation Module */
+#financial-summary-output, #sales-summary-output, #inventory-summary-output, #comprehensive-report-output {
+    margin-top: 20px;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+/* Sales Management Module */
+#order-container {
+    margin: 20px 0;
+}
+
+/* Navigation */
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 10px 25px;
+    border: 2px solid #fff;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+.hidden {
+    display: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .center-content h2 {
+        font-size: 1.6rem;
+    }
+
+    input, select, button {
+        font-size: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+}

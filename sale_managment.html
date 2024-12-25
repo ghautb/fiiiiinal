@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Management</title>
+    <link rel="stylesheet" href="total.css">
+    <script src="sales.js" defer></script>
+    <script src="data_share.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sales Management Module</h1>
+        </div>
+    </header>
+    <main>
+        <!-- Order Management Section -->
+        <section class="center-content">
+            <h2>Order Management</h2>
+            <div class="form-section">
+                <form id="order-form">
+                    <label for="order-id">Order ID:</label>
+                    <input type="text" id="order-id" placeholder="Unique Identifier" required>
+
+                    <label for="customer-details">Customer Details:</label>
+                    <input type="text" id="customer-details" placeholder="Name, Contact, Shipping Info" required>
+
+                    <label for="product-category">Product Category:</label>
+                    <input type="text" id="product-category" placeholder="e.g., Small, Medium, Large" required>
+
+                    <label for="quantity-ordered">Quantity Ordered:</label>
+                    <input type="number" id="quantity-ordered" placeholder="Enter Quantity" required>
+
+                    <label for="unit-price">Unit Price:</label>
+                    <input type="number" id="unit-price" placeholder="Price per Unit" required>
+
+                    <label for="order-status">Order Status:</label>
+                    <select id="order-status">
+                        <option value="pending">Pending</option>
+                        <option value="processed">Processed</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                    </select>
+
+                    <button type="submit">Save Order</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="center-content">
+            <h2>Search and Filter Orders</h2>
+            <div class="form-section">
+                <label for="filter-field">Search:</label>
+                <input type="text" id="filter-field" placeholder="Search by Customer, Category, or Status">
+                <button id="filter-button">Filter</button>
+            </div>
+        </section>
+
+        <!-- Order Display Section -->
+        <section class="center-content">
+            <h2>Order List</h2>
+            <div id="order-container">
+                <!-- Orders will be dynamically added here -->
+            </div>
+        </section>
+
+        <!-- Revenue Calculation Section -->
+        <section class="center-content">
+            <h2>Revenue Calculation</h2>
+            <div class="form-section">
+                <form id="revenue-form">
+                    <label for="product-category-revenue">Product Category:</label>
+                    <input type="text" id="product-category-revenue" placeholder="Enter Product Category">
+
+                    <label for="quantity-sold">Quantity Sold:</label>
+                    <input type="number" id="quantity-sold" placeholder="Units Sold">
+
+                    <label for="unit-price-revenue">Unit Price:</label>
+                    <input type="number" id="unit-price-revenue" placeholder="Price per Unit">
+
+                    <button type="button" id="calculate-revenue">Calculate Revenue</button>
+                </form>
+                <p id="revenue-output"></p>
+            </div>
+        </section>
+
+        <!-- Sales Reports Section -->
+        <section class="center-content">
+            <h2>Sales Reports</h2>
+            <div class="form-section">
+                <button id="generate-reports-category">Generate Reports by Category</button>
+                <button id="generate-reports-customer">Generate Reports by Customer</button>
+                <button id="generate-reports-time">Generate Reports by Time Period</button>
+                <button id="export-reports">Export Reports to CSV</button>
+            </div>
+            <div id="sales-report">
+                <!-- Dynamic reports will be displayed here -->
+                <p id="overall-revenue"></p>
+            </div>
+        </section>
+
+       
+
+        <!-- Home Button -->
+        <div class="home-section">
+            <button onclick="window.location.href='index.html';">Home</button>
+        </div>
+    </main>
+</body>
+</html>
